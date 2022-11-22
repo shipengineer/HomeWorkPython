@@ -18,18 +18,52 @@
 
 # holydays()
 
-# ----------------------------------Exercise #1------------------------------
+# ----------------------------------Exercise #2------------------------------
 # Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат. ¬ - Отрицание ⋁ - логическое "Или" ⋀ - логическое "И"
-fExpression = input("Первая предитата = ")
-sExpression = input("Вторая предитата = ")
-trdExpression = input("Тертья предитата = ")
+# fExpression = input("Первая предитата = ")
+# sExpression = input("Вторая предитата = ")
+# trdExpression = input("Тертья предитата = ")
+# ----------------------------------SOLUTION-----------------------------------
+# def logicCheck(X, Y, Z):
+#     firstHalf = X or Y or Z
+#     secondHalf = not X and not Y and not Z
+#     check = not firstHalf == secondHalf
+#     print(check)
 
 
-def logicCheck(X, Y, Z):
-    firstHalf = X or Y or Z
-    secondHalf = not X and not Y and not Z
-    check = not firstHalf == secondHalf
-    print(check)
+# logicCheck(fExpression, sExpression, trdExpression)
 
 
-logicCheck(fExpression, sExpression, trdExpression)
+# ----------------------------------Exercise #3------------------------------
+# Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка (или на какой оси она находится).
+# Пример:
+# - x=34; y=-30 -> 4
+# - x=2; y=4-> 1
+# - x=-34; y=-30 -> 3
+# ----------------------------------SOLUTION-----------------------------------
+
+# x = int(input("Координату X, Пожалуйста : "))
+# y = int(input("Координату Y, Пожалуйста : "))
+
+
+# def quadrant(x, y):
+#     if x > 0 and y > 0:
+#         print("Вы в ПЕРВОМ квадранте")
+#     elif x < 0 and y > 0:
+#         print("Вы во ВТОРОМ квадранте")
+#     elif x < 0 and y < 0:
+#         print("Вы в ТРЕТЬЕМ квадранте")
+#     elif x > 0 and y < 0:
+#         print("Вы в ЧЕТВЕРТОМ квадранте")
+#     else:
+#         print(f"Да вы НЕ в квадрантах, {axis(x,y)}")
+
+
+# def axis(x, y):
+#     if y == 0:
+#         return "вы на оси Y"
+#     elif x == 0:
+#         return "вы на оси X"
+
+
+# quadrant(x, y)
