@@ -42,31 +42,31 @@
 # - x=-34; y=-30 -> 3
 # ----------------------------------SOLUTION-----------------------------------
 
-# x = int(input("Координату X, Пожалуйста : "))
-# y = int(input("Координату Y, Пожалуйста : "))
+x = int(input("Координату X, Пожалуйста : "))
+y = int(input("Координату Y, Пожалуйста : "))
 
 
-# def quadrant(x, y):
-#     if x > 0 and y > 0:
-#         print("Вы в ПЕРВОМ квадранте")
-#     elif x < 0 and y > 0:
-#         print("Вы во ВТОРОМ квадранте")
-#     elif x < 0 and y < 0:
-#         print("Вы в ТРЕТЬЕМ квадранте")
-#     elif x > 0 and y < 0:
-#         print("Вы в ЧЕТВЕРТОМ квадранте")
-#     else:
-#         print(f"Да вы НЕ в квадрантах, {axis(x,y)}")
+def quadrant(x, y):
+    if x > 0 and y > 0:
+        print("Вы в ПЕРВОМ квадранте")
+    elif x < 0 and y > 0:
+        print("Вы во ВТОРОМ квадранте")
+    elif x < 0 and y < 0:
+        print("Вы в ТРЕТЬЕМ квадранте")
+    elif x > 0 and y < 0:
+        print("Вы в ЧЕТВЕРТОМ квадранте")
+    else:
+        print(f"Да вы НЕ в квадрантах, {axis(x,y)}")
 
 
-# def axis(x, y):
-#     if y == 0:
-#         return "вы на оси Y"
-#     elif x == 0:
-#         return "вы на оси X"
+def axis(x, y):
+    if y == 0:
+        return "вы на оси Y"
+    elif x == 0:
+        return "вы на оси X"
 
 
-# quadrant(x, y)
+quadrant(x, y)
 # ----------------------------------Exercise #4------------------------------
 # Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
 
@@ -96,22 +96,22 @@
 # - A (7,-5); B (1,-1) -> 7,21
 # ----------------------------------SOLUTION-----------------------------------
 
-frstPoint = list(
-    input("Введите координаты первой точки через пробел ").split())
-scndPoint = list(
-    input("Введите координаты первой точки через пробел ").split())
-print(frstPoint[1])
-print(scndPoint)
+# frstPoint = list(
+#     input("Введите координаты первой точки через пробел ").split())
+# scndPoint = list(
+#     input("Введите координаты первой точки через пробел ").split())
+# print(frstPoint[1])
+# print(scndPoint)
 
 
-def distance(fP, scdP):
-    if len(fP) != len(scdP):
-        print("Точки в разных измерениях")
-    else:
-        dist = float(0)
-        for i in range(len(fP)):
-            dist += (int(scdP[i])-int(fP[i]))**2
-        print(f"Прямое расстояние между точками {round(dist**(1/2),2)}")
+# def distance(fP, scdP):
+#     if len(fP) != len(scdP):
+#         print("Точки в разных измерениях")
+#     else:
+#         dist = float(0)
+#         for i in range(len(fP)):
+#             dist += (int(scdP[i])-int(fP[i]))**2
+#         print(f"Прямое расстояние между точками {round(dist**(1/2),2)}")
 
 
-distance(frstPoint, scndPoint)
+# distance(frstPoint, scndPoint)
