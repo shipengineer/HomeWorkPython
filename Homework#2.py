@@ -4,6 +4,9 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
+import random
+
+
 def sumElem(elem):
     result = 0
     massElem = str(elem)
@@ -69,9 +72,9 @@ def e23(n):
 
 # Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
 # (для продвинутых - с файлом, вариант минимум - ввести позиции в консоли) -2 -1 0 1 2 Позиции: 0,1 -> 2
-with open("file.txt", "r") as f:
-    firstIndex = int(f.readline())
-    secondIndex = int(f.readline())
+# with open("file.txt", "r") as f:
+#     firstIndex = int(f.readline())
+#     secondIndex = int(f.readline())
 
 
 def collection(n):
@@ -91,3 +94,31 @@ def collection(n):
 
 # Exercise #2.5
 # Реализуйте алгоритм перемешивания списка.
+
+
+def ignore(vodMas, count):
+    n = 0
+    while n in vodMas:
+        n = random.randint(0, count*2-1)
+
+    vodMas.append(n)
+    return n
+
+
+def shuffleMas(mas):
+    ignoreMas = []
+    count = int(len(mas)/2)
+    # print(count)
+    for i in range(count):
+        first = ignore(ignoreMas, count)
+        second = ignore(ignoreMas, count)
+        swap = mas[first]
+        mas[first] = mas[second]
+        mas[second] = swap
+    print(f"Перемешанный массив: {mas}")
+
+
+a = ["1", "2", "3", "4", "5", "6"]
+
+shuffleMas(a)
+# ____________________________________________________________________________________________________
