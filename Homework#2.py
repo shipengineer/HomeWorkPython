@@ -40,7 +40,7 @@ def nabor(elem):
         result.append(fill(i))
     print(result)
 
-# vvodnoe2 = input("Число для второй задачи")
+# vvodnoe2 = input("Число для второй задачи: ")
 # nabor(vvodnoe2)
 # ____________________________________________________________________________________________________
 
@@ -53,12 +53,41 @@ def nabor(elem):
 def e23(n):
     result23 = []
     sum = 0
-    for i in range(n):
-        result23[i] = (1+1/n)**n
-        sum = + result23[i]
+    for i in range(0, n):
+        result23.append((1+1/(i+1))**(i+1))
+        sum += result23[i-1]
     print(result23)
-    print(sum)
+    print(f"Сумма последовательности равна: {sum}")
 
 
-vvodnoe23 = input("Введите чсло для третьей задачи")
-e23(vvodnoe23)
+# vvodnoe23 = int(input("Введите число для третьей задачи: "))
+# e23(vvodnoe23)
+# ____________________________________________________________________________________________________
+
+
+# Exercise #2.4
+
+# Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
+# (для продвинутых - с файлом, вариант минимум - ввести позиции в консоли) -2 -1 0 1 2 Позиции: 0,1 -> 2
+with open("file.txt", "r") as f:
+    firstIndex = int(f.readline())
+    secondIndex = int(f.readline())
+
+
+def collection(n):
+    result24 = []
+    for i in range(-n, n+1):
+        result24.append(i)
+    print(result24)
+    mult = result24[firstIndex]*result24[secondIndex]
+    print(mult)
+
+
+# vvodnoe24 = int(input("Введите число для четвертой задачи: "))
+# print(f"Вы выбрали {firstIndex} и {secondIndex} места в массиве для умножения")
+# collection(vvodnoe24)
+# ____________________________________________________________________________________________________
+
+
+# Exercise #2.5
+# Реализуйте алгоритм перемешивания списка.
