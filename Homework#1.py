@@ -5,15 +5,15 @@
 # - 7 -> да
 # - 1 -> нет
 # ----------------------------------SOLUTION-----------------------------------
-# def holydays():
-#     a = int(input("впишите день недели "))
-#     if a == 6 or a == 7:
-#         print(f"{a} -> да")
-#     elif 0 < a < 6:
-#         print(f"{a} -> нет")
-#     else:
-#         print(f"{a} -> введен не день недели")
-#         holydays()
+def holydays():
+    a = int(input("впишите день недели "))
+    if a == 6 or a == 7:
+        print(f"{a} -> да")
+    elif 0 < a < 6:
+        print(f"{a} -> нет")
+    else:
+        print(f"{a} -> введен не день недели")
+        holydays()
 
 
 # holydays()
