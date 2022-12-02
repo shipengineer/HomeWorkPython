@@ -31,14 +31,14 @@ def parMult(mas):
     result = []
     count = len(mas)
     for i in range(int(count/2)):
-        result.append(mas[i]*mas[int(len(mas)-i-1)])
+        result.append(mas[i]*mas[int(-i-1)])
     if len(mas)/2 % 1 > 0:
         result.append(mas[int(len(mas)/2)]**2)
     print(result)
 
 
-# parMult(proverka32)
-# parMult(proverka322)
+parMult(proverka32)
+parMult(proverka322)
 # ____________________________________________________________________________________________________
 
 
@@ -107,4 +107,4 @@ def negativeFibonacci(num):
     print(result)
 
 
-negativeFibonacci(10)
+# negativeFibonacci(10)
