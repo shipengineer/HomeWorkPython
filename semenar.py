@@ -99,44 +99,44 @@
 # 2) с помощью дополнительных библиотек Python
 
 
-from sympy.solvers import solve
-from sympy import Symbol
+# from sympy.solvers import solve
+# from sympy import Symbol
 
 
-def roots(a, b, c):
-    D = 0
-    D = b**2 - 4 * a*c
-    if D < 0:
-        print("Нет корней")
-    elif D == 0:
-        x1 = -b/(2*a)
-        print(x1)
-    elif D > 0:
-        x1 = (-b + D**0.5)/(2 * a)
-        x2 = (-b - D**0.5)/(2 * a)
-        print(x1, x2)
+# def roots(a, b, c):
+#     D = 0
+#     D = b**2 - 4 * a*c
+#     if D < 0:
+#         print("Нет корней")
+#     elif D == 0:
+#         x1 = -b/(2*a)
+#         print(x1)
+#     elif D > 0:
+#         x1 = (-b + D**0.5)/(2 * a)
+#         x2 = (-b - D**0.5)/(2 * a)
+#         print(x1, x2)
 
 
-def rootsSymPy(a, b, c):
-    x = Symbol('x')
-    print(solve(a*x**2+b*x+c, x))
+# def rootsSymPy(a, b, c):
+#     x = Symbol('x')
+#     print(solve(a*x**2+b*x+c, x))
 
 
-rootsSymPy(2, 6, 9)
+# rootsSymPy(2, 6, 9)
 
 
-def NOD(a, b):
-    while a != 0 and b != 0:
-        if a > b:
-            a = a % b
-        else:
-            b = b % a
-    return (a+b)
+# def NOD(a, b):
+#     while a != 0 and b != 0:
+#         if a > b:
+#             a = a % b
+#         else:
+#             b = b % a
+#     return (a+b)
 
 
-def NOK(first, second):
-    print(f'Наименьшее общее кратное = {first*second/NOD(first, second)}')
-    return ((first*second/NOD(first, second)))
+# def NOK(first, second):
+#     print(f'Наименьшее общее кратное = {first*second/NOD(first, second)}')
+#     return ((first*second/NOD(first, second)))
 
 
-NOK(int(input("Введите первое число: ")), int(input("Введите второе число: ")))
+# NOK(int(input("Введите первое число: ")), int(input("Введите второе число: ")))
