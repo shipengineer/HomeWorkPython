@@ -30,11 +30,9 @@ def newGame():
         for col in range(3):
             field[row][col]['text'] = ' '
             field[row][col]['background'] = 'lavender'
-    global gameRun
+    global gameRun, crossCount, order
     gameRun = True
-    global crossCount
     crossCount = 0
-    global order
     order = True
 
 
