@@ -25,16 +25,16 @@
 # Вывод:
 # (('house', 'дом'), ('car', 'машина'), ('men', 'человек'), ('tree', 'дерево'))
 
-string = 'house=дом car=машина men=человек tree=дерево'
+# string = 'house=дом car=машина men=человек tree=дерево'
 
 
-def dictFromStr(vvodnoe):
-    list1 = vvodnoe.split()
-    list2 = []
-    for i in range(len(list1)):
-        list2.append(list1[i].split('='))
-    list2 = tuple(map(tuple, list2))
-    print(list2)
+# def dictFromStr(vvodnoe):
+#     list1 = vvodnoe.split()
+#     list2 = []
+#     for i in range(len(list1)):
+#         list2.append(list1[i].split('='))
+#     list2 = tuple(map(tuple, list2))
+#     print(list2)
 
 
-dictFromStr(string)
+# dictFromStr(string)
