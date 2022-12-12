@@ -21,7 +21,8 @@ def sumEven(mas):
 spisok1 = [1, 2, 3, 4, 5, 6, 7, 1, 10]
 proverka = [2, 3, 5, 9, 3]
 sum = 0
-(lambda y: sum=sum + y) for x in (list(filter(lambda x: True if spisok1.index(x) %
-                                              2 == 0 else False, spisok1)))
+for x in (list(filter(lambda x: True if spisok1.index(x) %
+                      2 == 0 else False, spisok1))):
+    sum += x
 # sum = + x for x in spisok1 if spisok1.index(x) % 2 == 0
 print(sum)
