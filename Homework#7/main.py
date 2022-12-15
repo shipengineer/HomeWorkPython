@@ -11,7 +11,7 @@ class BookApp(QtWidgets.QMainWindow, ui_Telephone.Ui_MainWindow):
         self.setupUi(self)
         self.init_adress()
 
-        # self.button_create.clicked.connect(self.create_record)
+        # self.button_create.clicked.connect(self.)
 
     def init_adress(self):
         with open('phonebase.txt', 'r') as data:
@@ -30,10 +30,10 @@ class BookApp(QtWidgets.QMainWindow, ui_Telephone.Ui_MainWindow):
                 row, 2, QtWidgets.QTableWidgetItem(person["age"]))
             row = row + 1
 
-    def search(self):
-        if self.line_search.text != "":
-            self.tableWidget.find(self.line_search.text)
-            # def create_record(self):
+        while self.line_search.text != "Поиск":
+            print(str(self.line_search.text))
+            x = str(self.line_search.text)
+            self.tableWidget.x
 
 
 def dicrionary(elem):
