@@ -6,5 +6,5 @@ def print_finded(contact):
     print("Вот совпадение:")
     out = ""
     for elem in contact:
-        out += (elem+" ")
+        out += str(elem)+" "
     print(out)

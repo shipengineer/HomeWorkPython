@@ -1,8 +1,8 @@
 import model as ml
 import view as vw
-from pathlib import Path
 
-book = ml.get_base("phonebase.txt")
+path = "Homework#1\\Homework#7.2\\"
+book = ml.get_base(path+"phonebase.txt")
 
 
 def main_menu():
@@ -21,4 +21,4 @@ def main_menu():
     main_menu()
 
 
-main_menu()
+
