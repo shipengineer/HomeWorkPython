@@ -1,22 +1,40 @@
-def init_book():
-    with open('book.cvs', "r") as book:
-        print("Ваш справочник")
-        print("1 - посмотреть все контакты\n2 - найти контакт\n3 - добавить контакт\n4 - удалить контакт\n5 - экспортировать контакты\n6 - импортировать контакты")
-        command = int(input("Введите номер команды: "))
-        if command not in range(1, 6):
-            init_book()
-        else:
-            return [command, book]
+def init_book(file):
+    base = []
+    out = []
+    with open(file, "r") as file:
+        base = file.readlines()
+        for elem in base:
+            out.append(elem.split())
+    return out
 
 
-def view_contacts(data):
-    print("Все контакты")
-    for elem in data:
-        print(elem + "\n")
+def main_menu():
+    print("Ваш справочник")
+    print("1 - посмотреть все контакты\n2 - найти контакт\n3 - добавить контакт\n4 - удалить контакт\n5 - экспортировать контакты\n6 - импортировать контакты")
+    command = int(input("Введите номер команды: "))
+    if command not in range(1, 6):
+        main_menu()
+    else:
+        return command
 
 
-def print_finded(data):
-    for elem in data:
+book = init_book('phonebase.txt')
+print(book)
+
+
+def view_contacts(book):
+    print("Все контакты:")
+    for person in book:
+        for key in person:
+            print(key)
+        print("\n")
+
+
+view_contacts(book)
+
+
+def print_finded(book):
+    for elem in book:
         print("Вот совпадение:")
         out = ""
         for key, value in elem:
@@ -39,6 +57,3 @@ def export_question():
 
 def import_qestion():
     return input("Укажите файл импорта:")
-
-
-init_book()

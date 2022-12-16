@@ -1,5 +1,5 @@
 from view import print_finded
-from export_xml import create_export
+
 
 
 def find_contact(data, item):
@@ -32,13 +32,14 @@ def dicrionary(elem):
 
 
 def export_file(data, IDs):
-    IDs = IDs.split(" ")
-    new_data = []
-    for contact in IDs:
-        for elem in data:
-            if contact in elem:
-                new_data.append(elem)
-    create_export(new_data)
+    pass
+    # IDs = IDs.split(" ")
+    # new_data = []
+    # for contact in IDs:
+    #     for elem in data:
+    #         if contact in elem:
+    #             new_data.append(elem)
+    # create_export(new_data)
 
 
 def import_file():

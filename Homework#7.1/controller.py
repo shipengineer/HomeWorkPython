@@ -1,22 +1,23 @@
 import operand as op
 import view as vw
-
-with open('book.cvs', "w", newline=" ") as klic:
-    klic.write("wwwww")
+file = 'phonebase.txt'
 
 
 def button_click():
-    command = vw.init_book()[0]
-    book = vw.init_book()[1]
+    command = vw.init_book(file)[0]
+    book = vw.init_book(file)[1]
     if command == 1:
         vw.view_contacts
     if command == 2:
-        op.find_contact(input("Кого ищем?"), book)
+        op.find_contact(book, input("Кого ищем?"))
     if command == 3:
-        op.create_contact(book, vw.create_contact_input)
+        op.create_contact(book, vw.create_contact_input())
     if command == 4:
-        op.delete_contact_ID(book, vw.delete_contact_print)
+        op.delete_contact_ID(book, vw.delete_contact_print())
     if command == 5:
-        op.export_file(book, vw.export_question)
+        op.export_file(book, vw.export_question())
     if command == 6:
         op.import_file()
+
+
+button_click()
