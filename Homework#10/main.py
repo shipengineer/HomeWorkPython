@@ -39,12 +39,12 @@ base = convert(soup)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(
-        message.chat.id, 'Готов предоставить вам курсы валют\nУкажите какая валюта вас интересует')
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
     for elem in base:
         markup.add(types.InlineKeyboardButton(f'{elem[1]}'))
+    bot.send_message(
+        message.chat.id, 'Готов предоставить вам курсы валют\nУкажите какая валюта вас интересует', reply_markup=markup)
 
 
 @bot.message_handler(content_types='text')
