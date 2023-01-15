@@ -26,7 +26,7 @@ def check_win(message):
 def new_game(message):
     global game, vase, turn
     game[message.chat.id] = True
-    vase[message.chat.id] = 56
+    vase[message.chat.id] = 117
     turn[message.chat.id] = choice([True, False])
 
 
@@ -40,7 +40,7 @@ def start_message(message):
     markup.add(item2, item3)
     markup.add(item1)
 
-    bot.send_message(message.chat.id, 'Начнем игру?',
+    bot.send_message(message.chat.id, 'Начнем игру?\nМожно тянуть до 28 конфет за раз\nВ вазе 117 конфет\nКто первый решит жребий\nКоличество конфет отправляйте в чат',
                      reply_markup=markup)
 
 # Здесь я решил не изобретать велосипед. Насколько я понял, мы обрабатываем вводимое
@@ -78,7 +78,7 @@ def message_reply(message):
         new_game(message)
         game_mode[message.chat.id] = 'pvp'
         bot.send_message(
-            message.chat.id, f"Тянет игрок номер {1 if turn[message.chat.id] else 2}")
+            message.chat.id, f"Тянет игрок номер {1 if turn[message.chat.id] else 2}\nОтправьте сколько конфет тянете")
 
     if message.text == "Игра против бота":
         new_game(message)
